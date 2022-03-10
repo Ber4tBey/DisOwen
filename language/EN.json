@@ -1,0 +1,112 @@
+{
+    "__OWENJSON__": true,
+    "LANGUAGE": "Türkçe",
+    "LANGCODE": "tr",
+    "AUTHOR": "Ber4tbey",
+    "STRINGS": { 
+        "_owen": {
+                "COMMAND": "**💻DisOwen Command List:**",
+                "NOFOUND": "💻 Please specify an Owen module!",
+                "COMINFO": "**⚡️ Please specify which Owen module you would like help with ! Usage: .owen <module name>**",
+                "COMMAND1": "🔧 **Command:**",
+                "ALTERNATE": "**🌀 Description:**",
+                "USE": "**🧿Usage**:",
+                "DESC": "Lists all my commands or information about a specific command."
+            
+        },
+        "_plugin": {
+            "INSTALL_DESC": "The plugin loads.",
+            "NEED_URL": "Please enter a URL! Sample:",
+            "INVALID_URL": "```Please enter a valid URL!```",
+            "INVALID_PLUGIN": "*❌ Your plugin is faulty!*\n*Error:*",
+            "INSTALLED": "*✅ Plugin installed successfully!*",
+            "PLUGIN_DESC": "Shows the plugins you have installed.",
+            "INSTALLED_FROM_REMOTE": "*Plugins you have installed externally:*\n",
+            "NO_PLUGIN": "*You have not installed any external plugins!*",
+            "REMOVE_DESC": "Removes the plugin.",
+            "NEED_PLUGIN": "```Please enter a Plugin! Example: .plugin __test```",
+            "NOT_FOUND_PLUGIN": "```Maybe you installed such a plugin, maybe you didn't. But it certainly isn't right now.```",
+            "DELETED": "*✅Module deleted successfully! You must reboot for the changes to take effect. *"
+        },
+        "admin": {
+            "BAN_DESC": "Bans people from the group. Tag the person next to the command.",
+            "IM_NOT_ADMIN": "*I'm not an admin in this group!*",
+            "BANNED": "removed from the group!",
+            "GIVE_ME_USER": "*Give me a user!*",
+            "NOT_BAN_ME": "I can't ban myself!"
+        },
+        "afk": {
+            "IM_AFK": "*I'm AFK now!*",
+            "REASON": "Reason",
+            "LAST_SEEN": "",
+            "IM_NOT_AFK": "```I'm not AFK```",
+            "HOUR": "hour",
+            "MINUTE": "mınute",
+            "SECOND": "second",
+            "AFK_STAT" : "I'm Afk Right Now"
+        },
+        
+        "spammer": {
+         "SPAMMER_DESC": "Spams example: **.spam 10 Hello",
+         "NEED_WRD": "You must enter a text so that I can spam. Example: **.spam 10 Hello**"
+        },
+
+        "heroku": {
+            "RESTART_DESC": "Restart DisOwen",
+            "RESTART_MSG": "```Restarting...```",
+            "DYNO_DESC": "Check heroku dyno usage",
+            "DYNO_TOTAL": "```Total Quota```",
+            "DYNO_USED": "```Quota used```",
+            "PERCENTAGE": "```Percent```",
+            "DYNO_LEFT": "```Remaining```",
+            "SETVAR_DESC": "Heroku has a shortcut and settings settings",
+            "SET_SUCCESS": " Successfully set```{} ➜ {}```",
+            "KEY_VAL_MISSING": "```You typed missing Key or Value.```",
+            "INVALID": "```Invalid key: value format```",
+            "GETVAR_DESC": "Heroku config var fetches.",
+            "DELVAR_DESC": "Heroku config var deletes.",
+            "DEL_SUCCESS": "```{} successfully deleted```",
+            "NOT_FOUND": "```no results found for this key```"           
+        },
+        
+        
+        
+        
+        
+        "profile": {
+            "BLOCK_DESC": "Blocks the user you specify.",
+            "UNBLOCK_DESC": "Unblocks the user you specify.",
+            "BLOCKED": "you are blocked",
+            "UNBLOCKED": "your obstacle is lifted",
+            "BLOCKED_UPPER": "You are blocked!",
+            "UNBLOCKED_UPPER": "I unblocked it.",
+            "NEED_USER": "Give me a user!"
+           
+            
+           
+        },
+        
+        "system_stats": {
+            "ALIVE_DESC": "Is the bot working??",
+            "PING_DESC": "Measures your bot's ping."
+        },
+       
+        "updater": {
+            "MESSAGE_T_LONG": "I am sending it as a file because the number of changes is too many.",
+            "UPDATER_DESC": "Updates your bot.",
+            "UPDATE": "*Your bot is fully up to date!*",
+            "NEW_UPDATE": "New update available for bot!*\n\nChanges:*\n```",
+            "UPDATE_NOW_DESC": "Make Update.",
+            "UPDATING": "_Update in progress..._",
+            "INVALID_HEROKU": "*❌Your Heroku information is incorrect !*",
+            "UPDATED": "*✅ The update was successful!*",
+            "UPDATED_LOCAL": "*Update was successful!*\n_Changes you need to reboot._✅ "
+        },
+        "weather": {
+            "WEATHER_DESC": "Brings the weather.",
+            "NEED_LOCATION": "Please enter a location!*\n*Example:* ```.weather Londra````"
+            
+        }
+    
+    }
+}

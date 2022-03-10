@@ -1,0 +1,44 @@
+{
+  "name": "DisOwen ",
+  "description": "The world first Discord Userbot",
+  "repository": "https://github.com/Ber4tbey/disowen",
+  "logo": "https://i.hizliresim.com/60dgunt.jpg",
+  "keywords": ["node", "discord", "owen"],
+   "stack": "container",
+  
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Bot tokeni nasıl alındığını bilmiyorsanız kurulum videosunu izleyin.",
+      "required": "true"
+    },
+    "PREFIX": {
+      "description": "Botun komutları algılaması için komut başlangıcı.",
+      "value": "."
+    },
+    
+   "LANGUAGE": {
+    "description": "Botunuzun dili (EN/TR/US)",
+    "required": "true",
+    "value": "TR"
+
+   },
+   "HEROKU_API_KEY": {
+    "description": "Heroku api keyiniz.",
+    "required": "true",
+    "value": ""
+
+   },
+   "HEROKU_APP_NAME": {
+    "description": "heroku app name",
+    "required": "true",
+    "value": ""
+
+   }
+  },
+    "addons": [{
+      "plan": "heroku-postgresql"
+    }],
+    "buildpacks": [{
+      "url": "heroku-community/apt"
+      }]
+  }

@@ -1,0 +1,113 @@
+{
+    "__OWENJSON__": true,
+    "LANGUAGE": "Türkçe",
+    "LANGCODE": "tr",
+    "AUTHOR": "Ber4tbey",
+    "STRINGS": { 
+        "_owen": {
+                "COMMAND": "**💻DisOwen Komut Listesi:**",
+                "NOFOUND": "💻 Lütfen bir Owen modülü belirtin!",
+                "COMINFO": "**⚡️ Lütfen hangi Owen modülü için yardım istediğinizi belirtin ! Kullanım: .owen <modül adı>**",
+                "COMMAND1": "🔧 **Komut:**",
+                "ALTERNATE": "**🌀 Açıklama:**",
+                "USE": "**🧿Kullanım**:",
+                "DESC": "Tüm komutlarımı veya belirli bir komutla ilgili bilgileri listeler.",
+                "OWENIN": "[komut ismi]"
+            
+        },
+        "_plugin": {
+            "INSTALL_DESC": "Plugin yükler.",
+            "NEED_URL": "Lütfen bir URL giriniz! Örnek:",
+            "INVALID_URL": "```Lütfen bir geçerli URL giriniz!```",
+            "INVALID_PLUGIN": "*❌ Plugininiz hatalı!*\n*Hata:*",
+            "INSTALLED": "*✅ Plugin başarılı bir şekilde yüklendi!*",
+            "PLUGIN_DESC": "Yüklediğiniz pluginleri gösterir.",
+            "INSTALLED_FROM_REMOTE": "*Dışarıdan yüklediğiniz pluginler:*\n",
+            "NO_PLUGIN": "*Dışarıdan hiç plugin yüklememişsiniz!*",
+            "REMOVE_DESC": "Plugin kaldırır.",
+            "NEED_PLUGIN": "```Lütfen bir Plugin giriniz! Örnek: .plugin __test```",
+            "NOT_FOUND_PLUGIN": "```Böyle bir plugin belki yüklediniz, belki de yüklemediniz. Ama şu an olmadığı kesin.```",
+            "DELETED": "*✅ Modül başarıyla silindi! Değişikliklerin uygulanması için yeniden başlatmanız gerekmektedir.*"
+        },
+        "admin": {
+            "BAN_DESC": "Gruptan kişi banlar. Komutun yanına kişiyi etiketleyin.",
+            "IM_NOT_ADMIN": "*Bu grupta admin değilim!*",
+            "BANNED": "gruptan çıkarıldı!",
+            "GIVE_ME_USER": "*Bana bir kullanıcı ver!*",
+            "NOT_BAN_ME": "Kendimi banlayamam!"
+        },
+        "afk": {
+            "IM_AFK": "*Artık AFK'yım!*",
+            "REASON": "Sebep",
+            "LAST_SEEN": "Son Görülme",
+            "IM_NOT_AFK": "```Artık AFK değilim!```",
+            "HOUR": "saat",
+            "MINUTE": "dakika",
+            "SECOND": "saniye",
+            "AFK_STAT" : "Sahibim Şuan Afk"
+        },
+        
+        "spammer": {
+         "SPAMMER_DESC": "Spam atar örnek: **.spam 10 Merhaba",
+         "NEED_WRD": "Spam Yapabilmem için yazı girmelisini örnek: **.spam 10 Merhaba"
+        },
+
+        "heroku": {
+            "RESTART_DESC": "DisOwen'i yeniden başlatın",
+            "RESTART_MSG": "```Yeniden başlatılıyor...```",
+            "DYNO_DESC": "Heroku dyno kullanımını kontrol edin",
+            "DYNO_TOTAL": "```Toplam Kota```",
+            "DYNO_USED": "```Kullanılan kota```",
+            "PERCENTAGE": "```Yüzde```",
+            "DYNO_LEFT": "```Kalan```",
+            "SETVAR_DESC": "Heroku'da kısa yolla config var ayarlar",
+            "SET_SUCCESS": "Başarıyla ayarlandı ```{} ➜ {}```",
+            "KEY_VAL_MISSING": "```Key veya Value eksik yazdınız.```",
+            "INVALID": "```Geçersiz key: value biçimi```",
+            "GETVAR_DESC": "Heroku config var getirir.",
+            "DELVAR_DESC": "Heroku config var siler.",
+            "DEL_SUCCESS": "```{} başarıyla silindi```",
+            "NOT_FOUND": "```bu anahtar için sonuç bulunamadı```"           
+        },
+        
+        
+        
+        
+        
+        "profile": {
+            "BLOCK_DESC": "Belirttiğiniz kullanıcıyı engeller.",
+            "UNBLOCK_DESC": "Belirttiğiniz kullanıcının engelini kaldırır.",
+            "BLOCKED": "engellendin",
+            "UNBLOCKED": "engelin kalktı",
+            "BLOCKED_UPPER": "Engellendin!",
+            "UNBLOCKED_UPPER": "Engelini kaldırdım.",
+            "NEED_USER": "Bana bir kullanıcı ver!"
+           
+            
+           
+        },
+        
+        "system_stats": {
+            "ALIVE_DESC": "Bot çalışıyor mu?",
+            "PING_DESC": "Botunuzun pingini ölçer."
+        },
+       
+        "updater": {
+            "MESSAGE_T_LONG": "Değişiklik sayısı çok fazla olduğu için dosya olarak gönderiyorum.",
+            "UPDATER_DESC": "Botunuzu günceller.",
+            "UPDATE": "*Botunuz tamamen güncel!*",
+            "NEW_UPDATE": "*Bot için yeni güncelleme mevcut!*\n\nDeğişiklikler:\n```",
+            "UPDATE_NOW_DESC": "Güncelleme yapar.",
+            "UPDATING": "_Güncelleme yapılıyor..._",
+            "INVALID_HEROKU": "*❌ Heroku bilgileriniz yanlış!*",
+            "UPDATED": "*✅ Güncelleme başarılı oldu!*",
+            "UPDATED_LOCAL": "*✅ Güncelleme başarılı oldu!*\n_Değişiklikler yeniden başlatmanız gerekmektedir._"
+        },
+        "weather": {
+            "WEATHER_DESC": "Hava durumu getirir.",
+            "NEED_LOCATION": "*Lütfen bir konum yazın!*\n*Örnek:* ```.weather İstanbul```"
+            
+        }
+    
+    }
+}

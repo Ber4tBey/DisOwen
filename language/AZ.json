@@ -1,0 +1,104 @@
+{
+    "__OWENJSON__": true,
+    "LANGUAGE": "Azərbaycanca",
+    "LANGCODE": "az",
+    "AUTHOR": "Fvreed",
+    "STRINGS": { 
+        "_owen": {
+                "COMMAND": "**💻DisOwen Əmr Siyahısı:**",
+                "NOFOUND": "💻 Xahiş edirəm bir Owen modulu adı qeyd edin!",
+                "COMINFO": "**⚡️ Zəhmət olmasa, hansı Owen modulunda kömək istədiyinizi qeyd edin! İstifadəsi: .owen <modul adı>**",
+                "COMMAND1": "🔧 **Əmr:**",
+                "ALTERNATE": "**🌀 Açıqlama:**",
+                "USE": "**🧿İstifadəsi**:",
+                "DESC": "Bütün əmrləri və ya müəyyən bir əmr haqqında məlumatı sadalayır.",
+                "OWENIN": "[əmr adı]"
+            
+        },
+        "_plugin": {
+            "INSTALL_DESC": "Plugin yükləyər.",
+            "NEED_URL": "Zəhmət olmasa URL daxil edin! Nümunə:",
+            "INVALID_URL": "```Xahiş edirəm düzgün URL daxil edin!```",
+            "INVALID_PLUGIN": "*❌ Plugininiz xətalıdır!*\n*Xəta:*",
+            "INSTALLED": "*✅ Plugin uğurla yükləndi!*",
+            "PLUGIN_DESC": "Yüklədiyiniz pluginlərin siyahısını göstərər.",
+            "INSTALLED_FROM_REMOTE": "*Yüklədiyiniz pluginlər:*\n",
+            "NO_PLUGIN": "*Yüklənmiş plugin yoxdur!*",
+            "REMOVE_DESC": "Plugini silər.",
+            "NEED_PLUGIN": "```Zəhmət olmasa plugin adı daxil edin! Nümunə: .plugin __test```",
+            "NOT_FOUND_PLUGIN": "```Bəlkə belə bir plagin quraşdırdınız, bəlkə etmədiniz. Amma bu, əlbəttə ki, indi deyil.```",
+            "DELETED": "*✅ Modul uğurla silindi! Dəyişikliklərin qüvvəyə minməsi üçün yenidən başlamalısınız.*"
+        },
+        "admin": {
+            "BAN_DESC": "Qrupdakı insanları qadağan edir. Əmrin yanındakı şəxsi tag edin.",
+            "IM_NOT_ADMIN": "*Mən bu qrupda admin deyiləm!*",
+            "BANNED": "qrupdan çıxarıldı!",
+            "GIVE_ME_USER": "*Mənə istifadəçi ver!*",
+            "NOT_BAN_ME": "Özümü banlaya bilmərəm!"
+        },
+        "afk": {
+            "IM_AFK": "*Artıq AFK'yam!*",
+            "REASON": "Səbəb",
+            "LAST_SEEN": "Son görülmə",
+            "IM_NOT_AFK": "```Artıq AFK deyiləm!```",
+            "HOUR": "saat",
+            "MINUTE": "dəqiqə",
+            "SECOND": "saniyə",
+            "AFK_STAT" : "Sahibim AFK-dır."
+        },
+        
+        "spammer": {
+         "SPAMMER_DESC": "Spam atar nümunə: **.spam 10 Salam",
+         "NEED_WRD": "Siz məqalə daxil etməlisiniz ki, mən spam göndərə bilim: **.spam 10 Salam"
+        },
+
+        "heroku": {
+            "RESTART_DESC": "DisOwen-i yenidən başladın",
+            "RESTART_MSG": "```Yenidən işə salınır...```",
+            "DYNO_DESC": "Heroku dyno istifadəsini yoxlayın",
+            "DYNO_TOTAL": "```Ümumi kvota```",
+            "DYNO_USED": "```İstifadə edilən kvota```",
+            "PERCENTAGE": "```%```",
+            "DYNO_LEFT": "```Qalan```",
+            "SETVAR_DESC": "Heroku'ya config var əlavə edər.",
+            "SET_SUCCESS": "Uğurla ayarlandı ```{} ➜ {}```",
+            "KEY_VAL_MISSING": "```Bir xəta baş verdi.```",
+            "INVALID": "```Yanlış açar: dəyər formatı```",
+            "GETVAR_DESC": "Heroku konfiqurasiyaları gətirir.",
+            "DELVAR_DESC": "Heroku config var silər.",
+            "DEL_SUCCESS": "```{} uğurla silindi```",
+            "NOT_FOUND": "```heçnə tapılmadı```"           
+        },
+        "profile": {
+            "BLOCK_DESC": "Göstərdiyiniz istifadəçini bloklayır.",
+            "UNBLOCK_DESC": "Göstərdiyiniz istifadəçini blokdan çıxarır.",
+            "BLOCKED": "əngəlləndin",
+            "UNBLOCKED": "qadağanız aradan qaldırıldı",
+            "BLOCKED_UPPER": "Əngəlləndin!",
+            "UNBLOCKED_UPPER": "Qadağanı qaldırdım.",
+            "NEED_USER": "Mənə istifadəçi ver!"    
+        },
+        
+        "system_stats": {
+            "ALIVE_DESC": "Bot işləyirmi?",
+            "PING_DESC": "Botunuzun pingini ölçər."
+        },
+        "updater": {
+            "MESSAGE_T_LONG": "Dəyişikliklərin sayı çox olduğu üçün onu fayl olaraq göndərirəm.",
+            "UPDATER_DESC": "Botunuzu güncəlləyər.",
+            "UPDATE": "*Botunuz güncəldir!*",
+            "NEW_UPDATE": "*Bot üçün yeni güncəlləmə mövcuddur!*\n\nDəyişikliklər:\n```",
+            "UPDATE_NOW_DESC": "Güncəlləmə edər.",
+            "UPDATING": "_Güncəlləmə edilir..._",
+            "INVALID_HEROKU": "*❌ Heroku məlumatlarınız səhvdir!*",
+            "UPDATED": "*✅ Uğurla güncəlləndi!*",
+            "UPDATED_LOCAL": "*✅ Güncəlləmə uğurlu oldu!*\n_Botunuz yenidən başlayır._"
+        },
+        "weather": {
+            "WEATHER_DESC": "Hava məlumatını gətirər.",
+            "NEED_LOCATION": "*Xahiş edirəm bir məkan adı yazın!*\n*Nümunə:* ```.weather Baku```"
+            
+        }
+    
+    }
+}
