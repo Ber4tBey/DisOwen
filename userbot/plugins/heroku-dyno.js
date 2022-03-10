@@ -33,7 +33,7 @@ module.exports.run = async (bot, message, args) => {
         url = "https://api.heroku.com/accounts/" + account.id + "/actions/get-quota"
         headers = {
             "User-Agent": "Chrome/80.0.3987.149 Mobile Safari/537.36",
-            "Authorization": "Bearer " + API_KEY,
+            "Authorization": "Bearer " + Config.API_KEY,
             "Accept": "application/vnd.heroku+json; version=3.account-quotas",
         }
         await got(url, {headers: headers}).then(async (res) => {
