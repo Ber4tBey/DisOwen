@@ -33,6 +33,7 @@
     "stream": "^0.0.2",
     "superagent": "^3.8.2",
     "translatte": "^3.0.1",
-    "ytdl-core": "^0.18.1"
+    "ytdl-core": "^0.18.1",
+    "quick.db": "^7.1.1"
   }
 }
