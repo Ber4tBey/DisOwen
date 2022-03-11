@@ -11,7 +11,7 @@ const Discord = require("discord.js");
 
 const superagent = require("superagent");
 const { DataTypes } = require('sequelize');
-const {GreetingsDB} = require("/root/DisOwen/userbot/plugins/sql/greetings");
+const {GreetingsDB} = require("./userbot/plugins/sql/greetings");
 const os = require("os");
 var exec = require('child_process').exec, child;
 var fs = require("fs");
@@ -43,13 +43,13 @@ const DisOwenDb = config.DATABASE.define('DisOwen', {
         allowNull: false
     }
 });
-fs.readdirSync('/root/DisOwen/userbot/plugins/sql/').forEach(plugin => {
+fs.readdirSync('./userbot/plugins/sql/').forEach(plugin => {
     if((plugin).toLowerCase() == '.js') {
-        require('/root/DisOwen/userbot/plugins/sql/' + plugin);
+        require('./userbot/plugins/sql/' + plugin);
     }
 });
 
-const plugindb = require('/root/DisOwen/userbot/plugins/sql/plugin');
+const plugindb = require('./userbot/plugins/sql/plugin');
 
   
 require("./language")
@@ -64,8 +64,8 @@ var randomstring = arr => arr[Math.floor(Math.random() * arr.length)];
 var randomhex = function randomhex() { return Math.floor(Math.random() * 16777214) + 1 }
 var round = function round(value, decimals) { return Number(Math.round(value+'e'+decimals)+'e-'+decimals); }
 var editmsg = function error(message, sendmsg) { message.edit(sendmsg);}
-var usermissperm = function usermissperm() { return randomstring(["Bunu yapabilmem için yeterli yetkim yok."]) + " (Yetki-Yetersiz)" }
-var dmerror = function dmerror() { return randomstring("Bu komut özel mesajda kullanabilmen için tasarlanmadı")}
+var usermissperm = function usermissperm() { return ("Bunu yapabilmem için yeterli yetkim yok.") + " (Yetki-Yetersiz)" }
+var dmerror = function dmerror() { return ("Bu komut özel mesajda kullanabilmen için tasarlanmadı!")}
 var sleep = function sleep(ms) {return new Promise((resolve) => {setTimeout(resolve, ms);});}
 
 const LOGINFO = "[INFO] ";
@@ -95,14 +95,14 @@ bot.on("ready", async function() {
     
     var plugins = await plugindb.PluginDB.findAll();
     plugins.map(async (plugin) => {
-        if (!fs.existsSync('/root/DisOwen/userbot/plugins/' + plugin.dataValues.name + '.js')) {
+        if (!fs.existsSync('./userbot/plugins/' + plugin.dataValues.name + '.js')) {
             console.log(plugin.dataValues.name);
             
             var response = await got(plugin.dataValues.url);
             if (response.statusCode == 200) {
                 
-                fs.writeFileSync('/root/DisOwen/userbot/plugins/' + plugin.dataValues.name + '.js', response.body);
-                require('/root/DisOwen/userbot/plugins/' + plugin.dataValues.name + '.js');
+                fs.writeFileSync('./userbot/plugins/' + plugin.dataValues.name + '.js', response.body);
+                require('./userbot/plugins/' + plugin.dataValues.name + '.js');
             }     
         }
     });
@@ -112,14 +112,14 @@ bot.on("ready", async function() {
         chalk.blueBright.italic('⬇️  Installing plugins...')
     );
     
-    fs.readdir('/root/DisOwen/userbot/plugins/', (plugin, files) => {
+    fs.readdir('./userbot/plugins/', (plugin, files) => {
             
             var jsfiles = files.filter(f => f.split('.').pop() === 'js');
             if (jsfiles.length <= 0) { return console.log("Komut bulunamadı..."); }
 
             jsfiles.forEach((f, i) => {
                 
-                var cmds = require(`/root/DisOwen/userbot/plugins/${f}`);
+                var cmds = require(`./userbot/plugins/${f}`);
                 bot.commands.set(cmds.config.command, cmds);
                 bot.alias.set(cmds.config.alias, cmds);
                 bot.alias2.set(cmds.config.alias2, cmds);
@@ -143,10 +143,17 @@ console.log("Bot versiyonunuz: Owen ==>" +  config.VERSION)
     
         
     
-    
+// Gmute    
+bot.on("message", async function(message,match) {
+if (message.channel.type == 'dm')return;
 
+const gmid = require('quick.db')
+   a = gmid.fetch(message.author.id);
+   
+  if(a == message.author.id) {
+      await message.delete();
 
-
+  }})
 
 const Language = require('./language');
 const Lang = Language.getString('afk');
@@ -212,6 +219,10 @@ if(msg.author.id !== bot.user.id) return;
     
     
     }})
+
+
+    
+
 // --events  
 bot.on("message", async function(message) {
 try {
@@ -247,7 +258,7 @@ try {
         return;
     }
 } catch (e) {
-    console.log("Bir hata oluştu")
+    console.log(e)
      }
 
 });
