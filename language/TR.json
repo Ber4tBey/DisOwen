@@ -107,6 +107,18 @@
             "WEATHER_DESC": "Hava durumu getirir.",
             "NEED_LOCATION": "*Lütfen bir konum yazın!*\n*Örnek:* ```.weather İstanbul```"
             
+        },
+        "gmode": {
+            "IM_NOT_ADMIN": "````Mesajları silme yetkim yok.````",
+            "GIVE_ME_USER": "**Bana bir kullanıcı ver!**",
+            "NOT_GMUTE_ME": "**Kendimi susturamıyorum**",
+            "UNGMUTE_SUCCES": "```📣 Kullanıcı tekrardan konuşabilir!```",
+            "GMUTE_SUCCES": "```📣 Kullanıcı küresel olarak susturuldu.```",
+            "GMUTE_DESC": "```Yönetici olduğunuz tüm sunucularda kişiyi sessize alır.```",
+            "UNGMUTE_DESC": "Yönetici olduğunuz tüm gruplardaki kişiyi sessizden çıkartır..",
+            "GMUTE_AV": "```Kullanıcı zaten küresel olarak yasaklanmış!```"
+            
+            
         }
     
     }

@@ -98,6 +98,18 @@
             "WEATHER_DESC": "Hava məlumatını gətirər.",
             "NEED_LOCATION": "*Xahiş edirəm bir məkan adı yazın!*\n*Nümunə:* ```.weather Baku```"
             
+            
+        },
+        "gmode": {
+            "IM_NOT_ADMIN": "````Mesajları silmək üçün yetkim yoxdur.````",
+            "GIVE_ME_USER": "Mənə bir istifadəçi ver!",
+            "NOT_GMUTE_ME": "Mən özümü susdura bilmirəm.",
+            "UNGMUTE_SUCCES": " 📣 İstifadəçi dünya miqyasında qadağan edildi.",
+            "GMUTE_DESC": "*Admin olduğunuz qrupdaki bir şəxsi susdurar.*",
+            "UNGMUTE_DESC": "*Susdurduğunuz şəxsin səsini açar.*",
+            "GMUTE_AV": "İstifadəçi onsuz da dünya miqyasında ban edilib!!"
+
+            
         }
     
     }

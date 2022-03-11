@@ -106,6 +106,18 @@
             "WEATHER_DESC": "Brings the weather.",
             "NEED_LOCATION": "Please enter a location!*\n*Example:* ```.weather Londra````"
             
+        },
+        "gmode": {
+            "IM_NOT_ADMIN": "````I am not authorized to delete messages.````",
+            "GIVE_ME_USER": "**Give me a user!**",
+            "NOT_GMUTE_ME": "**I can't gmute myself**",
+            "UNGMUTE_SUCCES": "```📣 User unmuted globally!```",
+            "GMUTE_SUCCES": "```📣 User muted globally!```",
+            "GMUTE_DESC": "*Mutes the person in all groups that you are an admin.*",
+            "UNGMUTE_DESC": "*Unmute the person in all groups you are admin.*",
+            "GMUTE_AV": "```The user is already banned globally!```"
+
+            
         }
     
     }
