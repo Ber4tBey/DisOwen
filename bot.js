@@ -146,7 +146,7 @@ console.log("Bot versiyonunuz: Owen ==>" +  config.VERSION)
 // Gmute    
 bot.on("message", async function(message,match) {
 if (message.channel.type == 'dm')return;
-
+if(!message.member.hasPermission("MANAGE_MESSAGES")) return;
 const gmid = require('quick.db')
    a = gmid.fetch(message.author.id);
    
