@@ -145,6 +145,7 @@ console.log("Bot versiyonunuz: Owen ==>" +  config.VERSION)
     
 // Gmute    
 bot.on("message", async function(message,match) {
+try{
 if (message.channel.type == 'dm')return;
 if(!message.member.hasPermission("MANAGE_MESSAGES")) return;
 const gmid = require('quick.db')
@@ -152,8 +153,12 @@ const gmid = require('quick.db')
    
   if(a == message.author.id) {
       await message.delete();
+  }
+  } catch (e) { 
+      return;
 
-  }})
+  }
+  })
 
 const Language = require('./language');
 const Lang = Language.getString('afk');
