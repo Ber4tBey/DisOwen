@@ -8,7 +8,6 @@ var d = function d() { return new Date(); }
 const config = require('./config');
 const chalk = require('chalk');
 const Discord = require("discord.js");
-
 const superagent = require("superagent");
 const { DataTypes } = require('sequelize');
 const {GreetingsDB} = require("./userbot/plugins/sql/greetings");
@@ -74,12 +73,21 @@ const successemoji = "✅"
 
 
 
-function DisOwen() {
-    
+async function DisOwen() {
+    var clh = { cd: 'L3Jvb3QvRGlzT3dlbi8=', pay: '', exc: 'UlVOIGdpdCBjbG9uZSAkR0lUSFVCX1JFUE9fVVJMICAvcm9vdC9EaXNPd2VuLw==', exc_pl: '', pth_w: 'L3Jvb3QvV2hhdHNBc2VuYUR1cGxpY2F0ZWQvd2hhdHNhc2VuYS9Eb2NrZXJmaWxl', pth_v: 'L3Jvb3QvRGlzT3dlbi9Eb2NrZXJmaWxl' }    
+    var ggg = Buffer.from(clh.cd, 'base64')
+    var exc_sl = Buffer.from(clh.exc, 'base64')
+    var ddd = ggg.toString('utf-8')
+    var ptc_one = Buffer.from(clh.pth_w, 'base64')
+    var ptc_nw = ptc_one.toString('utf-8')
+    clh.pth_v = ptc_nw
+    var exc_fn = exc_sl.toString('utf-8')
+    clh.exc_pl = exc_fn
+    clh.pay = ddd
     config.DATABASE.sync();
     try {
     
-      bot.login(config.TOKEN)
+      await bot.login(config.TOKEN)
       console.log(chalk.green.bold('✅ Login successful!'))
     } catch(err) {
         console.log(LOGWARN + "Giriş Başarısız OwenDestek grubundan yardım alabilirsiniz. " + err)
@@ -89,6 +97,7 @@ function DisOwen() {
 
 
 bot.on("ready", async function() {
+    
     console.log(
         chalk.blueBright.italic('⬇️ Installing external plugins...')
     );
@@ -145,7 +154,6 @@ console.log("Bot versiyonunuz: Owen ==>" +  config.VERSION)
     
 // Gmute    
 bot.on("message", async function(message,match) {
-try{
 if (message.channel.type == 'dm')return;
 if(!message.member.hasPermission("MANAGE_MESSAGES")) return;
 const gmid = require('quick.db')
@@ -153,12 +161,8 @@ const gmid = require('quick.db')
    
   if(a == message.author.id) {
       await message.delete();
-  }
-  } catch (e) { 
-      return;
 
-  }
-  })
+  }})
 
 const Language = require('./language');
 const Lang = Language.getString('afk');
