@@ -80,7 +80,7 @@ Author, Base, Bug Fixes, Modules
 - Translators
 
 ## License
-This project is protected by `GNU General Public Licence v3.0` license.
+This project is protected by `MIT` license.
 
 ### Disclaimer
 `Discord` name, its variations and the logo are registered trademarks of Discord Inc. We have nothing to do with the registered trademark
