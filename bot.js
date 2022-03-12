@@ -97,7 +97,9 @@ async function DisOwen() {
 
 
 bot.on("ready", async function() {
-    
+    bot.user.setStatus(config.STAT).catch(err => {
+        console.log("Error setting status from config. " + err)
+    })
     console.log(
         chalk.blueBright.italic('⬇️ Installing external plugins...')
     );

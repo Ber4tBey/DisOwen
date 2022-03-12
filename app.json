@@ -33,6 +33,14 @@
     "required": "true",
     "value": ""
 
+   },
+   "STATUS": {
+    "description": "Account status : online|dnd|idle|invisible",
+    "required": "true",
+    "value": ""
+ 
+
+
    }
   },
     "addons": [{
