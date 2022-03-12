@@ -15,7 +15,7 @@ const os = require("os");
 var exec = require('child_process').exec, child;
 var fs = require("fs");
 const got = (...args) => import('got').then(({default: got}) => got(...args));
-
+const db = require('quick.db')
 var bot = new Discord.Client();
 const { APIMessage, Structures } = require("discord.js");
 bot.commands = new Discord.Collection();
@@ -155,7 +155,7 @@ console.log("Bot versiyonunuz: Owen ==>" +  config.VERSION)
 // Gmute    
 bot.on("message", async function(message,match) {
 if (message.channel.type == 'dm')return;
-if(!message.member.hasPermission("MANAGE_MESSAGES")) return;
+
 const gmid = require('quick.db')
    a = gmid.fetch(message.author.id);
    
@@ -166,33 +166,27 @@ const gmid = require('quick.db')
 
 const Language = require('./language');
 const Lang = Language.getString('afk');
-//afk giriş
-bot.on("message", async function(msg,match) {
-    
 
-if(msg.author.id !== bot.user.id) return;  
-    if(msg.content.includes(config.PREFIX +"afk")){
-        if (!AFK.isAfk) {
-            AFK.lastseen = Math.round((new Date()).getTime() / 1000);
-            AFK.isAfk = true;
-            if (match !== '') { AFK.reason = match }
-            editmsg(msg,Lang.IM_AFK)
-            bot.user.setActivity(Lang.AFK_STAT, {type: 'PLAYING'}); 
-
-
-    }}})
 const map = new Map()
 
 //Afk olduğumuzu bildirme (DM İÇİN)
 bot.on("message", async function(msg) {
-if (AFK.isAfk) {
+a = db.fetch('isAfk')
+
+reason = db.fetch('reason')
+if (a == 'true') {
     if (msg.channel.type === "dm") {
         if (msg.author.id === bot.user.id) {
         } else {
           if (msg.author.bot) {
           } else {
-            
+            if (reason){
+                 
+                msg.channel.send(config.AFK_MESSAGE + "\n" + Lang.REASON + ` ${reason}`)
+            } else {
                 msg.channel.send(config.AFK_MESSAGE)
+
+            }
 
     
 
@@ -202,11 +196,20 @@ if (AFK.isAfk) {
 bot.on("message", async function(msg,match) {
 if (msg.channel.type === "dm") return;
 if(msg.content.includes(msg.content.match(/^<@!?${bot.user.id}>( |)$/))) return;  
-    if (AFK.isAfk) {
+a = db.fetch('isAfk')
+reason = db.fetch('reason')
+    if (a == 'true') {
     if(msg.isMemberMentioned(bot.user)){
+        if (reason){
+            
+            msg.channel.send(config.AFK_MESSAGE + "\n" + Lang.REASON + ` ${reason}`)
+        } else {
+            msg.channel.send(config.AFK_MESSAGE)
+
+        }
    
 
-        msg.channel.send(config.AFK_MESSAGE)
+        
         
     }}})
 //
@@ -215,12 +218,17 @@ if(msg.content.includes(msg.content.match(/^<@!?${bot.user.id}>( |)$/))) return;
 bot.on("message", async function(msg) {
 if(msg.content.includes(msg.content.match(/^<@!?${bot.user.id}>( |)$/))) return;
 if(msg.content.startsWith(config.AFK_MESSAGE)) return;
-if(msg.content.includes(config.PREFIX +"afk")) return;
+
 if(msg.author.id !== bot.user.id) return;
-    if (AFK.isAfk) {
+a = db.fetch('isAfk')
+    if (a == 'true') {
         AFK.lastseen = 0;
         AFK.reason = false;
         AFK.isAfk = false;
+        db.delete('isAfk')
+       reason = db.fetch('reason')
+       if (reason) db.delete('reason')
+        
         
             msg.channel.send(Lang.IM_NOT_AFK)
             bot.user.setActivity(''); 

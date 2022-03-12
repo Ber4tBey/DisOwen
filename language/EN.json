@@ -37,13 +37,15 @@
         },
         "afk": {
             "IM_AFK": "*I'm AFK now!*",
-            "REASON": "Reason",
+            "REASON": "**Reason:**",
             "LAST_SEEN": "",
             "IM_NOT_AFK": "```I'm not AFK```",
             "HOUR": "hour",
             "MINUTE": "mınute",
             "SECOND": "second",
-            "AFK_STAT" : "I'm Afk Right Now"
+            "AFK_STAT" : "I'm Afk Right Now",
+            "AFK_DESC": "It makes you AFK."
+            
         },
         
         "spammer": {

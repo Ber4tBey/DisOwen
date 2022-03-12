@@ -38,13 +38,14 @@
         },
         "afk": {
             "IM_AFK": "*Artık AFK'yım!*",
-            "REASON": "Sebep",
+            "REASON": "**Sebep:**",
             "LAST_SEEN": "Son Görülme",
             "IM_NOT_AFK": "```Artık AFK değilim!```",
             "HOUR": "saat",
             "MINUTE": "dakika",
             "SECOND": "saniye",
-            "AFK_STAT" : "Sahibim Şuan Afk"
+            "AFK_STAT" : "Sahibim Şuan Afk",
+            "AFK_DESC": "Sizi AFK yapar."
         },
         
         "spammer": {
