@@ -18,7 +18,7 @@ DATABASE_URL = process.env.DATABASE_URL === undefined ? './disowen.db' : process
 DEBUG = process.env.DEBUG === undefined ? false : convertToBool(process.env.DEBUG);
 
 module.exports = {
-    VERSION: 'v0.1.0 Public Beta',
+    VERSION: 'v0.2.0 Public Beta',
     TOKEN: process.env.BOT_TOKEN === undefined ? '' : process.env.BOT_TOKEN,
     PREFIX: process.env.PREFIX === undefined ? '.' : process.env.PREFIX,
     STAT: process.env.STATUS === undefined ? 'online' : process.env.STATUS,
