@@ -24,7 +24,7 @@
 
 > [Install Guide/Kurulum Yardımcısı/Qurulum Müavin](https://github.com/Ber4tbey/DisOwen/wiki)
 
-> [Video Guide]()
+> [Video Guide](https://www.youtube.com/watch?v=fQ_XDeogh2U&t=45s)
 
 
 
