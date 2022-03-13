@@ -4,7 +4,7 @@ you may not use this file except in compliance with the License.
 DisOwen - Ber4tbey
 */
 const db = require('quick.db')
-const Db = require('./sql/gmute');
+const Db = require('./sql/global');
 const Discord = require('discord.js-owen');
 const Language = require("../../language")
 const Lang = Language.getString('gmode');
@@ -28,7 +28,7 @@ module.exports.run = async (bot, message, args) => {
    a = gmid.fetch(replymsg.id);
    
   if(a == replymsg.id) {
-      Owen.editmsg(message,"Zaten küresel olarak susturulmuş");
+      Owen.editmsg(message,Lang.GMUTE_AV);
   } else {
    await Db.addgmute(replymsg.id)
    Owen.editmsg(message,Lang.GMUTE_SUCCES)

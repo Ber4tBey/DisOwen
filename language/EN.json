@@ -113,11 +113,19 @@
             "IM_NOT_ADMIN": "````I am not authorized to delete messages.````",
             "GIVE_ME_USER": "**Give me a user!**",
             "NOT_GMUTE_ME": "**I can't gmute myself**",
+            "NOT_GBAN_ME": "**I can't gban myself**",
             "UNGMUTE_SUCCES": "```📣 User unmuted globally!```",
             "GMUTE_SUCCES": "```📣 User muted globally!```",
+            "UNGBAN_SUCCES": "```📣 User unbanned globally!```",
+            "GBAN_SUCCES": "```📣 User banned globally!```",
             "GMUTE_DESC": "*Mutes the person in all groups that you are an admin.*",
+            "GBAN_DESC": "*Ban the person in all groups that you are an admin.*",
             "UNGMUTE_DESC": "*Unmute the person in all groups you are admin.*",
-            "GMUTE_AV": "```The user is already banned globally!```"
+            "UNGBAN_DESC": "*Unban the person in all groups you are admin.*",
+            "GMUTE_AV": "```The user is already muted globally!```",
+            "GBAN_AV": "```The user is already banned globally!```",
+            "GBAN_TEXT": "```You are a bad person! I will not keep you here any longer. You are banned!```"
+           
 
             
         }

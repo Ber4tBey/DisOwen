@@ -113,11 +113,18 @@
             "IM_NOT_ADMIN": "````Mesajları silme yetkim yok.````",
             "GIVE_ME_USER": "**Bana bir kullanıcı ver!**",
             "NOT_GMUTE_ME": "**Kendimi susturamıyorum**",
-            "UNGMUTE_SUCCES": "```📣 Kullanıcı tekrardan konuşabilir!```",
-            "GMUTE_SUCCES": "```📣 Kullanıcı küresel olarak susturuldu.```",
-            "GMUTE_DESC": "```Yönetici olduğunuz tüm sunucularda kişiyi sessize alır.```",
-            "UNGMUTE_DESC": "Yönetici olduğunuz tüm gruplardaki kişiyi sessizden çıkartır..",
-            "GMUTE_AV": "```Kullanıcı zaten küresel olarak yasaklanmış!```"
+            "NOT_GBAN_ME": "**Kendime gban yapamam**",
+            "UNGMUTE_SUCCES": "```📣 Kullanıcının sesi küresel olarak açıldı!```",
+            "GMUTE_SUCCES": "```📣 Kullanıcı küresel olarak sessize alındı!```",
+            "UNGBAN_SUCCES": "```📣 Kullanıcının küresel yasağı kaldırıldı!```",
+            "GBAN_SUCCES": "```📣 Kullanıcı dünya çapında yasaklandı!```",
+            "GMUTE_DESC": "*Yönetici olduğunuz tüm gruplardaki kişiyi sessize alır.*",
+            "GBAN_DESC": "*Yönetici olduğunuz tüm gruplardaki kişiyi yasaklayın.*",
+            "UNGMUTE_DESC": "*Yönetici olduğunuz tüm gruplardaki kişinin sesini açın.*",
+            "UNGBAN_DESC": "*Yönetici olduğunuz tüm gruplardaki kişinin yasağını kaldırın.*",
+            "GMUTE_AV": "```Kullanıcı zaten küresel olarak susturuldu!```",
+            "GBAN_AV": "```Kullanıcı zaten küresel olarak yasaklandı.```",
+            "GBAN_TEXT": "```Sen kötü birisin! Seni daha fazla burada tutmayacağım. Yasaklandın!```"
             
             
         }

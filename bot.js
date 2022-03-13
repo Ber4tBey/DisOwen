@@ -150,16 +150,36 @@ console.log("Yardıma İhtiyacınız varsa, Destek grubumuza gelin t.me/OwenSupp
 console.log("Bot versiyonunuz: Owen ==>" +  config.VERSION)
 })
 
-
-    
+const Languagee = require('./language');
+const Langgg = Languagee.getString('gmode');
+//Gban    
+bot.on("message", async function(message,match) { 
+if (message.author.id == bot.user.id)return;
+if (message.channel.type == 'dm')return;      
+let guild = message.guild
+let replymsg = message.author.id
+const gmid = require('quick.db')
+a = gmid.fetch(`gban_${message.author.id}`,message.author.id); 
+if(a == message.author.id) {
+        try {
+            guild.ban(replymsg);
+            message.reply(Langgg.GBAN_TEXT)
+        } catch {
+            
+        }
+    } else {
         
+    }
     
+});
+
+
 // Gmute    
 bot.on("message", async function(message,match) {
 if (message.channel.type == 'dm')return;
 
 const gmid = require('quick.db')
-   a = gmid.fetch(message.author.id);
+   a = gmid.fetch(`gmute_${message.author.id}`,message.author.id);
    
   if(a == message.author.id) {
       await message.delete();

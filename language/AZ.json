@@ -102,13 +102,21 @@
             
         },
         "gmode": {
-            "IM_NOT_ADMIN": "````Mesajları silmək üçün yetkim yoxdur.````",
-            "GIVE_ME_USER": "Mənə bir istifadəçi ver!",
-            "NOT_GMUTE_ME": "Mən özümü susdura bilmirəm.",
-            "UNGMUTE_SUCCES": " 📣 İstifadəçi dünya miqyasında qadağan edildi.",
-            "GMUTE_DESC": "*Admin olduğunuz qrupdaki bir şəxsi susdurar.*",
-            "UNGMUTE_DESC": "*Susdurduğunuz şəxsin səsini açar.*",
-            "GMUTE_AV": "İstifadəçi onsuz da dünya miqyasında ban edilib!!"
+            "IM_NOT_ADMIN": "````Mesajları silmək səlahiyyətim yoxdur.````",
+            "GIVE_ME_USER": "**Mənə istifadəçi ver!**",
+            "NOT_GMUTE_ME": "**Mən özümü susdura bilmirəm**",
+            "NOT_GBAN_ME": "**Mən özümü gban bilmirəm**",
+            "UNGMUTE_SUCCES": "```📣 İstifadəçi qlobal olaraq səssizdən çıxarıldı!```",
+            "GMUTE_SUCCES": "```📣İstifadəçi qlobal olaraq səssizləşdirildi!```",
+            "UNGBAN_SUCCES": "```📣 İstifadəçi qlobal miqyasda qadağan edilib!```",
+            "GBAN_SUCCES": "```📣 İstifadəçi qlobal şəkildə qadağandır!```",
+            "GMUTE_DESC": "*Admin olduğunuz bütün qruplardakı şəxsin səsini söndürür.*",
+            "GBAN_DESC": "*Admin olduğunuzu bütün qruplarda qadağan edin.*",
+            "UNGMUTE_DESC": "*Admin olduğunuz bütün qruplardakı şəxsin səsini söndürün.*",
+            "UNGBAN_DESC": "*Admin olduğunuz bütün qruplardakı şəxsin qadağanını ləğv edin.*",
+            "GMUTE_AV": "```İstifadəçi artıq qlobal olaraq səssizdir!```",
+            "GBAN_AV": "```İstifadəçi artıq qlobal şəkildə qadağan edilib!```",
+            "GBAN_TEXT": "```Sən pis adamsan! Mən səni daha burada saxlamayacağam. Sizə qadağa qoyulub!```"
 
             
         }
