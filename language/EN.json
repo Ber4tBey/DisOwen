@@ -97,7 +97,7 @@
             "MESSAGE_T_LONG": "I am sending it as a file because the number of changes is too many.",
             "UPDATER_DESC": "Updates your bot.",
             "UPDATE": "*Your bot is fully up to date!*",
-            "NEW_UPDATE": "New update available for bot!*\n\nChanges:*\n```",
+            "NEW_UPDATE": "*New update available for bot!*\n\n*Changes:*\n```",
             "UPDATE_NOW_DESC": "Make Update.",
             "UPDATING": "_Update in progress..._",
             "INVALID_HEROKU": "*❌Your Heroku information is incorrect !*",
