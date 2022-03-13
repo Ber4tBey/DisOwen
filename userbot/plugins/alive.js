@@ -6,7 +6,7 @@ DisOwen - Ber4tbey
 
 
 const Owen = require("../../bot.js")
-const Discord = require('discord.js');
+const Discord = require('discord.js-owen');
 const config = require("../../config")
 const Language = require('../../language');
 const Lang = Language.getString('system_stats');

@@ -5,7 +5,7 @@ DisOwen - Ber4tbey
 */
 
 
-const Discord = require('discord.js');
+const Discord = require('discord.js-owen');
 const Language = require("../../language")
 const Lang = Language.getString('afk');
 const Owen = require("../../bot")

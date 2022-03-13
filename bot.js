@@ -7,7 +7,7 @@ DisOwen - Ber4tbey
 var d = function d() { return new Date(); }
 const config = require('./config');
 const chalk = require('chalk');
-const Discord = require("discord.js");
+const Discord = require("discord.js-owen");
 const superagent = require("superagent");
 const { DataTypes } = require('sequelize');
 const {GreetingsDB} = require("./userbot/plugins/sql/greetings");
@@ -17,7 +17,7 @@ var fs = require("fs");
 const got = (...args) => import('got').then(({default: got}) => got(...args));
 const db = require('quick.db')
 var bot = new Discord.Client();
-const { APIMessage, Structures } = require("discord.js");
+const { APIMessage, Structures } = require("discord.js-owen");
 bot.commands = new Discord.Collection();
 bot.alias = new Discord.Collection();
 bot.alias2 = new Discord.Collection();
