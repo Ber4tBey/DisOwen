@@ -37,10 +37,17 @@
    "STATUS": {
     "description": "Account status : online|dnd|idle|invisible",
     "required": "true",
-    "value": ""
- 
-
-
+    "value": "online"
+   },
+   "BOTLOG": {
+    "description": "Botlog mode true/false",
+    "required": "true",
+    "value": "false"
+   },
+   "BOTLOG_CHATID": {
+    "description": "Botlog chat ıd",
+    "required": "true",
+    "value": "0"
    }
   },
     "addons": [{

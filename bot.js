@@ -66,7 +66,8 @@ var editmsg = function error(message, sendmsg) { message.edit(sendmsg);}
 var usermissperm = function usermissperm() { return ("Bunu yapabilmem için yeterli yetkim yok.") + " (Yetki-Yetersiz)" }
 var dmerror = function dmerror() { return ("Bu komut özel mesajda kullanabilmen için tasarlanmadı!")}
 var sleep = function sleep(ms) {return new Promise((resolve) => {setTimeout(resolve, ms);});}
-
+var sendbotlog = function sendbotlog(message) {try { if (config.BOTLOG){bot.channels.get(config.BOTLOG_CHATID).send(message);} }catch(e){console.log("BOTLOG_CHATID Değeri yanlış ya da Metin kanalı id si belirtmediniz.") 
+console.log("The value of BOTLOG_CHATID is incorrect or you did not specify a Text channel id.")}}
 const LOGINFO = "[INFO] ";
 const LOGWARN = "[WARN] ";
 const successemoji = "✅"
@@ -96,7 +97,19 @@ async function DisOwen() {
 }
 
 
+
+  
+    
+    
+    
+    
+   
+
+
+
 bot.on("ready", async function() {
+    
+        
     bot.user.setStatus(config.STAT).catch(err => {
         console.log("Error setting status from config. " + err)
     })
@@ -140,7 +153,32 @@ bot.on("ready", async function() {
     
     console.log(
         chalk.green.bold('✅ Plugins installed!')
-    );  
+    );
+if (config.BOTLOG) {
+
+    if (config.LANG == 'EN'){
+
+        sendbotlog(`⚡️**DisOwen Working**⚡️\n\n 🦸‍♀️ **Bot version:** *${config.VERSION}*\n\n *You can run the bot by typing **.alive** in any chat*\n **OwenProjects**`)
+    }
+    
+    if (config.LANG == 'TR'){
+    
+
+        sendbotlog(`⚡️**DisOwen Çalışıyor**⚡️\n\n 🦸‍♀️ **Bot versiyonu:** *${config.VERSION}*\n\n *Herhangi bir sohbete **.alive** yazarak botu çalıştırabilirsiniz*\n **OwenProjects**`)
+    }
+    if (config.LANG == 'AZ'){
+    
+
+        sendbotlog(`⚡️**DisOwen işləyir**⚡️\n\n 🦸‍♀️ **Bot versiyası:** *${config.VERSION}*\n\n *İstənilən çatda **.alive** yazaraq botu işlədə bilərsiniz*\n **OwenProjects**`)
+    }
+
+    
+
+
+
+
+
+} 
 console.log("+===========================================================+")
 console.log("|                     ✨Owen Userbot✨                       |")
 console.log("+==============+==============+==============+==============+")
@@ -191,13 +229,21 @@ const Lang = Language.getString('afk');
 
 const map = new Map()
 
-//Afk olduğumuzu bildirme (DM İÇİN)
+//Afk olduğumuzu bildirme
 bot.on("message", async function(msg) {
+if (config.BOTLOG){    
+if (msg.channel.id == config.BOTLOG_CHATID)return;}
+if(msg.author.id == bot.user.id) return;
 a = db.fetch('isAfk')
-
+var acti = ''
+if (config.LANG == 'TR') acti = `**Siz afk iken biri size mesaj gönderdi!**\n**Mesaj:** ${msg} \n**Adı :** ${msg.author.username}\n**Link:** ${msg.url}`
+if (config.LANG == 'EN') acti = `**Someone sent you a message while you were afk!**\n**Message: **${msg}\n**Name :** ${msg.author.username}\n**Link:** ${msg.url}`
+if (config.LANG == 'AZ') acti = `**Siz afk olanda kimsə sizə mesaj göndərdi!**\n**Mesaj:** ${msg}\n**Ad :** ${msg.author.username}\n**Link:** ${msg.url}`
 reason = db.fetch('reason')
 if (a == 'true') {
     if (msg.channel.type === "dm") {
+        
+        sendbotlog(acti)
         if (msg.author.id === bot.user.id) {
         } else {
           if (msg.author.bot) {
@@ -214,14 +260,28 @@ if (a == 'true') {
 
 
 }}}}})
+
+
+
 //Afk olduğumuzu bildirme (ETİKET İÇİN)
 bot.on("message", async function(msg,match) {
+var act = ''
+if (config.LANG == 'TR') act = `**Siz afk iken biri sizi etiketledi!**\n\**Adı :** ${msg.author.username}n**Link: ${msg.url}**`
+if (config.LANG == 'AZ') act = `**Siz afk olduğunuz zaman kimsə sizi tag etti!**\n**Ad :** ${msg.author.username}\n**Link: ${msg.url}**`
+if (config.LANG == 'EN') act = `**Someone tagged you while you were afk!**\n**Name :** ${msg.author.username}\n**Link: ${msg.url}**`
+
+
+if(msg.author.id == bot.user.id) return;
+if (config.BOTLOG){    
+if (msg.channel.id == config.BOTLOG_CHATID)return;}
 if (msg.channel.type === "dm") return;
 if(msg.content.includes(msg.content.match(/^<@!?${bot.user.id}>( |)$/))) return;  
 a = db.fetch('isAfk')
 reason = db.fetch('reason')
     if (a == 'true') {
+        
     if(msg.isMemberMentioned(bot.user)){
+        sendbotlog(act)
         if (reason){
             
             msg.channel.send(config.AFK_MESSAGE + "\n" + Lang.REASON + ` ${reason}`)
@@ -238,6 +298,8 @@ reason = db.fetch('reason')
 
 //Afk dan çıkarma 
 bot.on("message", async function(msg) {
+if (config.BOTLOG){    
+if (msg.channel.id == config.BOTLOG_CHATID)return;}
 if(msg.content.includes(msg.content.match(/^<@!?${bot.user.id}>( |)$/))) return;
 if(msg.content.startsWith(config.AFK_MESSAGE)) return;
 
@@ -325,3 +387,5 @@ module.exports = {
 
 
 DisOwen();
+
+

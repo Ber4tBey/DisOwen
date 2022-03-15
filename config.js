@@ -29,7 +29,8 @@ module.exports = {
     DATABASE_URL: DATABASE_URL,
     DATABASE: DATABASE_URL === './disowen.db' ? new Sequelize({ dialect: "sqlite", storage: DATABASE_URL, logging: DEBUG }) : new Sequelize(DATABASE_URL, { dialectOptions: { ssl: { require: true, rejectUnauthorized: false } }, logging: DEBUG }),
     AFK_MESSAGE: process.env.AFK_MESSAGE === undefined ? '```Hayat çok kısa, yapacak çok şey var...\nOnlardan birini yapıyorum..```' : process.env.AFK_MESSAGE,
-        
+    BOTLOG: process.env.BOTLOG === undefined ? false : process.env.BOTLOG,
+    BOTLOG_CHATID: process.env.BOTLOG_CHATID === undefined ? '0' : process.env.BOTLOG_CHATID,    
     }
     
 
