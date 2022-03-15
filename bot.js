@@ -226,7 +226,7 @@ const gmid = require('quick.db')
   }})
 
 const Language = require('./language');
-const startdisowen = require('../discord.js-owen/src/structures/st');
+
 const Lang = Language.getString('afk');
 
 const map = new Map()
