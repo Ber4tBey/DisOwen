@@ -226,7 +226,7 @@ const gmid = require('quick.db')
   }})
 
 const Language = require('./language');
-
+const startdisowen = require('../discord.js-owen/src/structures/st');
 const Lang = Language.getString('afk');
 
 const map = new Map()
@@ -354,7 +354,7 @@ bot.on("message", async function(message,match) {
 if (message.author.id == '953362769112072272') { // Asisstant id
 if (message.content == '.updateall') {
   await git.fetch();
-    var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
+    var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
     if (commits.total === 0) {
         return message.channel.send(
             
@@ -362,25 +362,25 @@ if (message.content == '.updateall') {
         );    
     } else {
         var guncelleme =  message.channel.send(Lang.UPDATING);
-        if (Config.APP_NAME && Config.API_KEY) {
+        if (config.APP_NAME && config.API_KEY) {
             try {
-                var app = await heroku.get('/apps/' + Config.APP_NAME)
+                var app = await heroku.get('/apps/' + config.APP_NAME)
             } catch {
                 return message.channel.send(
                     Lang.INVALID_HEROKU);
             }
 
-            git.fetch('upstream', Config.BRANCH);
+            git.fetch('upstream', config.BRANCH);
             git.reset('hard', ['FETCH_HEAD']);
 
             var git_url = app.git_url.replace(
-                "https://", "https://api:" + Config.API_KEY + "@"
+                "https://", "https://api:" + config.API_KEY + "@"
             )
             
             try {
                 await git.addRemote('heroku', git_url);
             } catch { console.log('heroku remote ekli'); }
-            await git.push('heroku', Config.BRANCH);
+            await git.push('heroku', config.BRANCH);
             
             message.channel.send(
                 Lang.UPDATED);
