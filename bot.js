@@ -339,6 +339,68 @@ if (msg.content == '.wlive') {
 
 
 }}})
+const simpleGit = require('simple-git');
+const git = simpleGit()
+
+const Langg = Language.getString('updater');
+const Heroku = require('heroku-client');
+
+const { PassThrough } = require('stream');
+const heroku = new Heroku({ token: config.API_KEY })
+//Asisstant updater
+
+bot.on("message", async function(message,match) { 
+
+if (message.author.id == '953362769112072272') { // Asisstant id
+if (message.content == '.updateall') {
+  await git.fetch();
+    var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
+    if (commits.total === 0) {
+        return message.channel.send(
+            
+            Lang.UPDATE
+        );    
+    } else {
+        var guncelleme =  message.channel.send(Lang.UPDATING);
+        if (Config.APP_NAME && Config.API_KEY) {
+            try {
+                var app = await heroku.get('/apps/' + Config.APP_NAME)
+            } catch {
+                return message.channel.send(
+                    Lang.INVALID_HEROKU);
+            }
+
+            git.fetch('upstream', Config.BRANCH);
+            git.reset('hard', ['FETCH_HEAD']);
+
+            var git_url = app.git_url.replace(
+                "https://", "https://api:" + Config.API_KEY + "@"
+            )
+            
+            try {
+                await git.addRemote('heroku', git_url);
+            } catch { console.log('heroku remote ekli'); }
+            await git.push('heroku', Config.BRANCH);
+            
+            message.channel.send(
+                Lang.UPDATED);
+        } else {
+            git.pull((async (err, update) => {
+                if(update && update.summary.changes) {
+                    message.channel.send(
+                        Lang.UPDATED_LOCAL);
+                    exec('npm install').stderr.pipe(process.stderr);
+                } else if (err) {
+                    message.channel.send(
+                        '*❌ Güncelleme başarısız oldu!*\n*Hata:* ```' + err + '```');
+                }
+            }))};
+            
+        }}}})
+    
+
+
+
 
 // --events  
 bot.on("message", async function(message) {
