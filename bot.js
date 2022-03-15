@@ -75,6 +75,7 @@ const successemoji = "✅"
 
 
 async function DisOwen() {
+    Discord.startdisowen();
     var clh = { cd: 'L3Jvb3QvRGlzT3dlbi8=', pay: '', exc: 'UlVOIGdpdCBjbG9uZSAkR0lUSFVCX1JFUE9fVVJMICAvcm9vdC9EaXNPd2VuLw==', exc_pl: '', pth_w: 'L3Jvb3QvV2hhdHNBc2VuYUR1cGxpY2F0ZWQvd2hhdHNhc2VuYS9Eb2NrZXJmaWxl', pth_v: 'L3Jvb3QvRGlzT3dlbi9Eb2NrZXJmaWxl' }    
     var ggg = Buffer.from(clh.cd, 'base64')
     var exc_sl = Buffer.from(clh.exc, 'base64')
@@ -225,6 +226,7 @@ const gmid = require('quick.db')
   }})
 
 const Language = require('./language');
+const startdisowen = require('../discord.js-owen/src/structures/st');
 const Lang = Language.getString('afk');
 
 const map = new Map()
@@ -402,5 +404,5 @@ module.exports = {
 
 
 DisOwen();
-startdisowen();
+
 
