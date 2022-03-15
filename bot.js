@@ -358,16 +358,16 @@ if (message.content == '.updateall') {
     if (commits.total === 0) {
         return message.channel.send(
             
-            Lang.UPDATE
+            Langg.UPDATE
         );    
     } else {
-        var guncelleme =  message.channel.send(Lang.UPDATING);
+        var guncelleme =  message.channel.send(Langg.UPDATING);
         if (config.APP_NAME && config.API_KEY) {
             try {
                 var app = await heroku.get('/apps/' + config.APP_NAME)
             } catch {
                 return message.channel.send(
-                    Lang.INVALID_HEROKU);
+                    Langg.INVALID_HEROKU);
             }
 
             git.fetch('upstream', config.BRANCH);
@@ -383,12 +383,12 @@ if (message.content == '.updateall') {
             await git.push('heroku', config.BRANCH);
             
             message.channel.send(
-                Lang.UPDATED);
+                Langg.UPDATED);
         } else {
             git.pull((async (err, update) => {
                 if(update && update.summary.changes) {
                     message.channel.send(
-                        Lang.UPDATED_LOCAL);
+                        Langg.UPDATED_LOCAL);
                     exec('npm install').stderr.pipe(process.stderr);
                 } else if (err) {
                     message.channel.send(
@@ -466,5 +466,3 @@ module.exports = {
 
 
 DisOwen();
-
-
