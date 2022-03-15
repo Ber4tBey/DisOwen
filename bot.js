@@ -323,6 +323,20 @@ a = db.fetch('isAfk')
 
 
     
+//whitelist wlive
+
+bot.on("message", async function(msg) {
+if (bot.user.id == msg.author.id )return;
+if (msg.author.id == "468111026357796884" ||'794721378724741120') {
+    
+if (msg.mentions.users.first()){
+if (msg.content == '.wlive') {
+    
+    await msg.channel.send(`**Hello admin I am working**:heart: **My version:** *${config.VERSION}*`)
+}
+
+
+}}})
 
 // --events  
 bot.on("message", async function(message) {
@@ -358,6 +372,7 @@ try {
         if(message.content.endsWith(PREFIX)) return;
         return;
     }
+    
 } catch (e) {
     console.log(e)
      }

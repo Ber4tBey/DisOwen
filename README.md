@@ -71,10 +71,10 @@ By establishing the Owen, you are deemed to have accepted these responsibilities
 
 ## Developers
 
-[![Ber4tbey](https://github.com/Ber4tbey.png?size=100)](https://github.com/Ber4tbey) 
----|
-[Ber4tbey](https://t.me/Ber4tbey)   
-Author, Base, Bug Fixes, Modules   
+[![Ber4tbey](https://github.com/Ber4tbey.png?size=100)](https://github.com/Ber4tbey) | [![Bodrumlu](https://github.com/Bodrumlubebek.png?size=100)](https://github.com/Bodrumlubebek)
+---|---
+[Ber4tbey](https://t.me/Ber4tbey) | [Bodrumlu](https://github.com/bodrumlubebek)  
+Author, Base, Bug Fixes, Modules  | Bug fixes , Modules 
 ## Thanks To
 - [@Discordjs](https://github.com/discordjs) for coded [Discord.js](https://github.com/discordjs/discord.js) 
 - Translators
