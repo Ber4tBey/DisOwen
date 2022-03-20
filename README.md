@@ -78,8 +78,10 @@ Author, Base, Bug Fixes, Modules  | Bug fixes , Modules
 ## Thanks To
 - [@Discordjs](https://github.com/discordjs) for coded [Discord.js](https://github.com/discordjs/discord.js) 
 - Translators
-##Contact
+- 
+## Contact
 Email: ```beratbeywinchester@gmail.com```
+
 ## License
 This project is protected by `MIT` license.
 
