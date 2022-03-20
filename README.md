@@ -1,7 +1,6 @@
 
 
-# Email for collaboration
-  [beratbeywinchester@gmail.com](beratbeywinchester@gmail.com)
+Email for collaboration : [beratbeywinchester@gmail.com](beratbeywinchester@gmail.com)
 
 <div align="center">
   <img src="https://i.hizliresim.com/60dgunt.jpg" width="200" height="200">
