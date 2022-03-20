@@ -1,6 +1,6 @@
 
 
-Email for collaboration : [beratbeywinchester@gmail.com](beratbeywinchester@gmail.com)
+
 
 <div align="center">
   <img src="https://i.hizliresim.com/60dgunt.jpg" width="200" height="200">
@@ -78,7 +78,8 @@ Author, Base, Bug Fixes, Modules  | Bug fixes , Modules
 ## Thanks To
 - [@Discordjs](https://github.com/discordjs) for coded [Discord.js](https://github.com/discordjs/discord.js) 
 - Translators
-
+##Contact
+Email: ```beratbeywinchester@gmail.com```
 ## License
 This project is protected by `MIT` license.
 
