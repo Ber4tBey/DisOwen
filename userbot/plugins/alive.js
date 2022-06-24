@@ -13,12 +13,12 @@ const Lang = Language.getString('system_stats');
 module.exports.run = async (bot, message, args) => {
     
     ALIVE_STR = Owen.randomstring([
-        "`Userbotunuz çalışıyor ve sana bişey demek istiyor.. Seni seviyorum`❤️  ",
-        "🎆 `Endişelenme! Seni yanlız bırakmam.` `OwenUserbot çalışıyor.`",
-        "`⛈️ Elimden gelenin en iyisini yapmaya hazırım` ",
-        "✨ `OwenUserBot sahibinin emirlerine hazır...`  ",
-        "`Şuan en gelişmiş userbotun düzenlediği mesajı okuyor olmalısın`  ",
-        "`Benimi Aramıştın ❓ Ben Buradayım Merak Etme`  "
+        "`Your Userbot is working and wants to say something to you.. I love you`❤️  ",
+        "🎆 `Don't worry! My Lord I won't leave you alone.` `ProUserbot is working.`",
+        "`⛈️ I'm ready to do my best` ",
+        "✨ `ProUserbot is ready for owner's orders...`  ",
+        "`You should be reading the message edited by the most advanced userbot right now`  ",
+        "`You Called Me ❓ I'm Here Don't Worry`  "
     ])
     await Owen.editmsg(message,ALIVE_STR)
 
